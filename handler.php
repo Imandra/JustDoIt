@@ -6,8 +6,7 @@ if (isset($_POST)) {
     }
     $email = $_POST['email'];
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo 'Введите корректный email';
-        return false;
+        die ('Введите корректный email');
     }
     /*stored form data in a text file*/
     $f = fopen('app.txt', 'a+');
