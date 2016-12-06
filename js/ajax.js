@@ -8,16 +8,20 @@ $(function () {
             type: form.attr('method'),
             data: formData,
             dataType: 'text',
-            success: function (data) {
-                if (data) {
-                    $('#result').html(data);
-                    document.pay.reset();
+            success: [
+                function (data) {
+                    if (data) {
+                        $('#response').html(data);
+                        document.pay.reset();
+                    }
                 }
-            },
-            error: function (xhr) {
-                $('#result').text('Ошибка, код состояния HTTP: ' +
-                    xhr.status + ' ' + xhr.statusText);
-            }
+            ],
+            error: [
+                function (xhr) {
+                    $('#response').text('Ошибка, код состояния HTTP: ' +
+                        xhr.status + ' ' + xhr.statusText);
+                }
+            ]
         });
     });
 });
