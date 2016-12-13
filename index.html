@@ -17,6 +17,10 @@
     <!--[if lt IE 9]>
     <script src="js/html5shiv-printshiv.min.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/phonemask.js"></script>
 </head>
 <body class="html front not-logged-in no-sidebars page-main">
 <div id="skip-link">
@@ -402,15 +406,16 @@
 
                                                         <div class="pane-content">
                                                             <form class="webform-client-form webform-client-form-1"
-                                                                  action="/" method="post" id="webform-client-form-1"
-                                                                  accept-charset="UTF-8">
+                                                                  method="post" id="webform-client-form-1"
+                                                                  accept-charset="UTF-8" name="sub"
+                                                                  action='handler.php'>
                                                                 <div>
                                                                     <div class="col-md-3 col-sm-12 col-sx-12 form-item webform-component webform-component-textfield webform-component--name form-group form-item form-item-submitted-name form-type-textfield form-group">
                                                                         <input required="required"
                                                                                placeholder="Ваше имя"
                                                                                class="form-control form-text required"
                                                                                type="text" id="edit-submitted-name"
-                                                                               name="submitted[name]" value="" size="60"
+                                                                               name="name" value="" size="60"
                                                                                maxlength="128"/> <label
                                                                             class="control-label element-invisible"
                                                                             for="edit-submitted-name">Ваше имя <span
@@ -422,7 +427,7 @@
                                                                                placeholder="Ваш телефон"
                                                                                class="form-control form-text required"
                                                                                type="text" id="edit-submitted-phone"
-                                                                               name="submitted[phone]" value=""
+                                                                               name="phone" value=""
                                                                                size="60" maxlength="128"/> <label
                                                                             class="control-label element-invisible"
                                                                             for="edit-submitted-phone">Ваш телефон <span
@@ -434,23 +439,12 @@
                                                                                class="email form-control form-text form-email required"
                                                                                placeholder="Ваша эл. почта" type="email"
                                                                                id="edit-submitted-mail"
-                                                                               name="submitted[mail]" size="60"/> <label
+                                                                               name="mail" size="60"/> <label
                                                                             class="control-label element-invisible"
                                                                             for="edit-submitted-mail">Ваша эл. почта
                                                                         <span class="form-required"
                                                                               title="This field is required.">*</span></label>
                                                                     </div>
-                                                                    <input type="hidden" name="details[sid]"/>
-                                                                    <input type="hidden" name="details[page_num]"
-                                                                           value="1"/>
-                                                                    <input type="hidden" name="details[page_count]"
-                                                                           value="1"/>
-                                                                    <input type="hidden" name="details[finished]"
-                                                                           value="0"/>
-                                                                    <input type="hidden" name="form_build_id"
-                                                                           value="form-9Rnv9oxrrc_REwSZwUih24WF80oqxSK-vVUd5NGNNJs"/>
-                                                                    <input type="hidden" name="form_id"
-                                                                           value="webform_client_form_1"/>
                                                                     <div class="col-md-3 col-sm-12 col-xs-12">
                                                                         <div class="form-actions">
                                                                             <button class="webform-submit button-primary col-md-12 col-sm-12 col-xs-12 btn btn-default form-submit"

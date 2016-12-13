@@ -1,5 +1,5 @@
 $(function () {
-    $('#pay').on('submit', function (event) {
+    $('#webform-client-form-1').on('submit', function (event) {
         event.preventDefault();
         var form = $(this);
         var formData = form.serialize();
@@ -12,7 +12,7 @@ $(function () {
                 function (data) {
                     if (data) {
                         $('#response').html(data);
-                        document.pay.reset();
+                        document.sub.reset();
                     }
                 }
             ],
