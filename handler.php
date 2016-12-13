@@ -2,7 +2,7 @@
 $text = '';
 if (isset($_POST)) {
     /*validation of the entered email address*/
-    $to = $_POST['mail'];
+    $to = $_POST['email'];
     if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
         die ('Введите корректный email!');
     }
