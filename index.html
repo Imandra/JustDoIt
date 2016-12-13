@@ -1,22 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Тестовая форма</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/ajax.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/phonemask.js"></script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просто сделай</title>
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <link type="text/css" rel="stylesheet" href="css/ckeditor.css">
+    <link type="text/css" rel="stylesheet" href="css/onecol.css">
+    <!--<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.css" media="all">
+    <link type="text/css" rel="stylesheet" href="css/overrides.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    <!-- HTML5 element support for IE6-8 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<form name="pay" id="pay" method='post' action='handler.php'>
-    Name: <input type='text' name='name' title="name" placeholder="Ваше имя" required="required"> <br>
-    Email: <input type='email' name='email' title="email" required="required" placeholder="Ваша эл. почта"
-                  pattern="\S+@[a-z]+.[a-z]+"> <br>
-    Phone: <input type='text' name='phone' id="phone" title="phone" placeholder="Ваш телефон" required="required"> <br>
-    <button type="submit" id="submit">Отправить</button>
-</form>
-<div id="response"></div>
+<body class="html front not-logged-in no-sidebars page-main">
+<div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+</div>
+<header id="navbar" role="banner" class="navbar container-fluid navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header col-md-6 col-sm-6 col-xs-6">
+
+            <a class="name navbar-brand" href="#" title="Home">Просто <span>сделай</span></a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="social col-md-6 col-sm-6 col-xs-6">
+            <nav role="navigation">
+                <div class="region region-navigation">
+                    <section id="block-block-1" class="block block-block col-md-12 col-sm-12 col-xs-12 clearfix">
+
+
+                        <div class="col-md-12">
+                            <ul>
+                                <li class="lab">Подпишись на нас:</li>
+                                <li class="fb"><a href="https://www.facebook.com/Just-Do-It-Game-171741459918754/"> </a>
+                                </li>
+                                <li class="vk"><a href="https://vk.com/justdoitgame"> </a></li>
+                                <li class="in"><a href="https://instagram.com"> </a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="main-container container-fluid">
+
+    <header role="banner" id="page-header">
+
+    </header> <!-- /#page-header -->
+
+    <div class="row">
+
+
+        <section class="col-sm-12">
+            <a id="main-content"></a>
+            <div class="region region-content">
+                <section id="block-system-main" class="block block-system clearfix">
+
+
+                    <div class="panel-display panel-1col clearfix">
+                        <div class="panel-panel panel-col">
+                            <div>
+                                <div class="panel-pane pane-panels-mini pane-block-1">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_1">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-1 col-md-8 col-sm-12 col-xs-12 col-md-offset-4">
+
+
+                                                        <div class="pane-content">
+                                                            <p>Случалось ли так, что вы не замечали, как прошла неделя?
+                                                                Еще одна? А потом еще одна?&nbsp;&nbsp;</p>
+                                                            <p>Если нет, то скорее всего у вас синдром, который в народе
+                                                                называют “белка в колесе”.</p>
+                                                            <p>&nbsp;</p>
+                                                            <p>Вы ждете, что вот оно, наконец-то лето придет и уж тогда
+                                                                я!…</p>
+                                                            <p>Но лето прошло, и самое время для “вот новогодние
+                                                                каникулы наступят и уж тогда я!…”.</p>
+                                                            <p><strong>Ну как, узнаете себя?</strong></p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-2 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_2">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-2 col-md-6 col-sm-6 col-xs-12 text-center">
+
+
+                                                        <div class="pane-content">
+                                                            <p>Время стремительно утекает и с&nbsp;этим нужно что-то
+                                                                делать!</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-3 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_3">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-3 col-md-7 col-sm-12 col-xs-12 col-md-offset-5">
+
+
+                                                        <div class="pane-content">
+                                                            <p>Я, так же как и вы, работаю 8 часов 5 дней в неделю.
+                                                                Времени на что-то еще остается совсем ничего.&nbsp;Да, я
+                                                                стараюсь поддерживать себя в форме: делаю пробежки,
+                                                                катаюсь на велосипеде и уважаю лыжи. Я стараюсь много
+                                                                читать и встречаться с друзьями.</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-4 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_4">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-4 col-md-8 col-sm-8 col-xs-12 col-md-offset-4 col-sm-offset-4 text-center">
+
+
+                                                        <div class="pane-content">
+                                                            <p>Вспомните, какую последнюю книгу не по работе прочитали
+                                                                вы?</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-5 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_5">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-5 col-md-10 col-sm-10 col-xs-12">
+
+
+                                                        <div class="pane-content">
+                                                            <p>Но есть одно “НО”: за последний год мне нечего вспомнить
+                                                                из того, чем бы я действительно гордился.</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-6 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_6">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-6 col-md-10 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-2">
+
+
+                                                        <div class="pane-content">
+                                                            <p>Сколько раз за последний год вы гордились собой?</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-7 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_7">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-7 col-md-9 col-sm-9 col-xs-12">
+
+
+                                                        <div class="pane-content">
+                                                            <p>Работа, дом, выходные на даче или дома. Ремонт
+                                                                квартиры.</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-8 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_8">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-8 col-md-12 col-sm-12 col-xs-12">
+
+
+                                                        <div class="pane-content">
+                                                            <h2 dir="ltr">Мы знаем как вам помочь достичь ваших
+                                                                целей.</h2>
+                                                            <p dir="ltr">Для этого вы:</p>
+                                                            <ol>
+                                                                <li dir="ltr">
+                                                                    <p dir="ltr"><a
+                                                                            href="https://justdoitgame.timepad.ru/event/367203/">Оплачиваете
+                                                                        участие</a></p>
+                                                                </li>
+                                                                <li dir="ltr">
+                                                                    <p dir="ltr">Каждый день выполняете задания</p>
+                                                                </li>
+                                                                <li dir="ltr">
+                                                                    <p dir="ltr">Отчитываетесь о своих результатах в
+                                                                        системе</p>
+                                                                </li>
+                                                                <li dir="ltr">
+                                                                    <p dir="ltr">Через три недели выполняете итоговое
+                                                                        задание</p>
+                                                                </li>
+                                                                <li dir="ltr">
+                                                                    <p dir="ltr">По результатам голосования участников
+                                                                        получаете денежный приз</p>
+                                                                </li>
+                                                            </ol>
+                                                            <p>&nbsp;</p>
+                                                            <p dir="ltr">Первое место: 55% призового фонда</p>
+                                                            <p>Два вторых места: по 15% призового фонда каждый</p>
+                                                            <p>Три третьих места: по 5% призового фонда каждый</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-9 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_9">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-9 col-md-12 col-sm-12 col-xs-12">
+
+
+                                                        <div class="pane-content">
+                                                            <h2 dir="ltr">Зачем это мне?</h2>
+                                                            <ul dir="ltr">
+                                                                <li>Выполняя задания, вы откроете для себя новые
+                                                                    возможности.
+                                                                </li>
+                                                                <li>Вы будете работать в группе единомышленников и
+                                                                    достижения будут даваться легче.
+                                                                </li>
+                                                                <li>За вашим прогрессом будет следить другой человек.
+                                                                </li>
+                                                                <li>Вы будете видеть, что делают другие участники.</li>
+                                                            </ul>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-block-10 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-block_10">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-10 col-md-12 col-sm-12 col-xs-12">
+
+
+                                                        <div class="pane-content">
+                                                            <h2 dir="ltr">Как начать?</h2>
+                                                            <p dir="ltr"><a
+                                                                    href="https://justdoitgame.timepad.ru/event/367203/">Участие
+                                                                платное, чтобы вам было что терять.</a></p>
+                                                            <p>В конце все участвуют в голосовании и вы можете выиграть
+                                                                призовой фонд!</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-panels-mini pane-i-want col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="pane-content">
+                                        <div class="panel-display panel-1col clearfix" id="mini-panel-i_want">
+                                            <div class="panel-panel panel-col">
+                                                <div>
+                                                    <div class="panel-pane pane-custom pane-1 col-md-12 col-sm-12 col-xs-12">
+
+
+                                                        <div class="pane-content">
+                                                            <h2 class="rtecenter">Я хочу принять участие!</h2>
+                                                            <p class="rtecenter">Заполните форму Мы вышлем Вам
+                                                                информацию</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="panel-separator"></div>
+                                                    <div class="panel-pane pane-block pane-webform-client-block-1 col-md-12 col-sm-12 col-xs-12 pane-webform">
+
+
+                                                        <div class="pane-content">
+                                                            <form class="webform-client-form webform-client-form-1"
+                                                                  action="/" method="post" id="webform-client-form-1"
+                                                                  accept-charset="UTF-8">
+                                                                <div>
+                                                                    <div class="col-md-3 col-sm-12 col-sx-12 form-item webform-component webform-component-textfield webform-component--name form-group form-item form-item-submitted-name form-type-textfield form-group">
+                                                                        <input required="required"
+                                                                               placeholder="Ваше имя"
+                                                                               class="form-control form-text required"
+                                                                               type="text" id="edit-submitted-name"
+                                                                               name="submitted[name]" value="" size="60"
+                                                                               maxlength="128"/> <label
+                                                                            class="control-label element-invisible"
+                                                                            for="edit-submitted-name">Ваше имя <span
+                                                                            class="form-required"
+                                                                            title="This field is required.">*</span></label>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-sm-12 col-sx-12 form-item webform-component webform-component-textfield webform-component--phone form-group form-item form-item-submitted-phone form-type-textfield form-group">
+                                                                        <input required="required"
+                                                                               placeholder="Ваш телефон"
+                                                                               class="form-control form-text required"
+                                                                               type="text" id="edit-submitted-phone"
+                                                                               name="submitted[phone]" value=""
+                                                                               size="60" maxlength="128"/> <label
+                                                                            class="control-label element-invisible"
+                                                                            for="edit-submitted-phone">Ваш телефон <span
+                                                                            class="form-required"
+                                                                            title="This field is required.">*</span></label>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-sm-12 col-sx-12 form-item webform-component webform-component-email webform-component--mail form-group form-item form-item-submitted-mail form-type-webform-email form-group">
+                                                                        <input required="required"
+                                                                               class="email form-control form-text form-email required"
+                                                                               placeholder="Ваша эл. почта" type="email"
+                                                                               id="edit-submitted-mail"
+                                                                               name="submitted[mail]" size="60"/> <label
+                                                                            class="control-label element-invisible"
+                                                                            for="edit-submitted-mail">Ваша эл. почта
+                                                                        <span class="form-required"
+                                                                              title="This field is required.">*</span></label>
+                                                                    </div>
+                                                                    <input type="hidden" name="details[sid]"/>
+                                                                    <input type="hidden" name="details[page_num]"
+                                                                           value="1"/>
+                                                                    <input type="hidden" name="details[page_count]"
+                                                                           value="1"/>
+                                                                    <input type="hidden" name="details[finished]"
+                                                                           value="0"/>
+                                                                    <input type="hidden" name="form_build_id"
+                                                                           value="form-9Rnv9oxrrc_REwSZwUih24WF80oqxSK-vVUd5NGNNJs"/>
+                                                                    <input type="hidden" name="form_id"
+                                                                           value="webform_client_form_1"/>
+                                                                    <div class="col-md-3 col-sm-12 col-xs-12">
+                                                                        <div class="form-actions">
+                                                                            <button class="webform-submit button-primary col-md-12 col-sm-12 col-xs-12 btn btn-default form-submit"
+                                                                                    type="submit" name="op"
+                                                                                    value="Подписаться на новости">
+                                                                                Подписаться на новости
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="panel-separator"></div>
+                                                    <div class="panel-pane pane-custom pane-2 col-md-12 col-sm-12 col-xs-12 text-center">
+
+
+                                                        <div class="pane-content">
+                                                            <p><a href="#">Оплатить
+                                                                участие</a></p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+
+    </div>
+</div>
+
+<footer class="footer container-fluid">
+    <div class="region region-footer">
+        <section id="block-block-2" class="block block-block clearfix">
+
+
+            <p class="rtecenter">Просто сделай @ 2016</p>
+
+        </section>
+    </div>
+</footer>
 </body>
 </html>

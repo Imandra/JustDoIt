@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовая форма</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/phonemask.js"></script>
+
+</head>
+<body>
+<form name="pay" id="pay" method='post' action='handler.php'>
+    Name: <input type='text' name='name' title="name" placeholder="Ваше имя" required="required"> <br>
+    Email: <input type='email' name='email' title="email" required="required" placeholder="Ваша эл. почта"
+                  pattern="\S+@[a-z]+.[a-z]+"> <br>
+    Phone: <input type='text' name='phone' id="phone" title="phone" placeholder="Ваш телефон" required="required"> <br>
+    <button type="submit" id="submit">Отправить</button>
+</form>
+<div id="response"></div>
+</body>
+</html>
