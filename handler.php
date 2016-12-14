@@ -26,7 +26,7 @@ if (isset($_POST)) {
     foreach ($_POST as $name => $value) {
         $text .= $name . ": " . $value . "\r\n";
     }
-    $file = fopen('app.txt', 'a+');
+    $file = fopen('findings/app.txt', 'a+');
     fwrite($file, 'date: ' . date('d-m-y, H-i-s') . "\r\n");
     fwrite($file, $text . "" . "\r\n");
     fclose($file);
