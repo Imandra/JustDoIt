@@ -8,10 +8,14 @@ $(function () {
             type: form.attr('method'),
             data: formData,
             dataType: 'text',
+            beforeSend: function () {
+                $('#op').attr('disabled', 'disabled');
+            },
             success: [
                 function (data) {
                     if (data) {
                         $('#response').html(data);
+                        alert(data);
                         document.sub.reset();
                     }
                 }
@@ -20,6 +24,13 @@ $(function () {
                 function (xhr) {
                     $('#response').text('Ошибка, код состояния HTTP: ' +
                         xhr.status + ' ' + xhr.statusText);
+                    alert('Ошибка, код состояния HTTP: ' +
+                        xhr.status + ' ' + xhr.statusText);
+                }
+            ],
+            complete: [
+                function () {
+                    $('#op').prop('disabled', false);
                 }
             ]
         });
