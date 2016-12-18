@@ -20,7 +20,6 @@ $(function () {
                         else {
                             swal('Ошибка!', data, 'error');
                         }
-                        document.sub.reset();
                     }
                 }
             ],
@@ -31,6 +30,10 @@ $(function () {
             ],
             complete: [
                 function () {
+                    $('#webform-client-form-1')[0].reset();
+                    $('#edit-submitted-name').attr('required','required');
+                    $('#edit-submitted-phone').attr('required','required');
+                    $('#edit-submitted-mail').attr('required','required');
                     $('#op').prop('disabled', false);
                 }
             ]
