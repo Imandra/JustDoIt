@@ -4,7 +4,7 @@ if (isset($_POST)) {
     /*validation of the entered email address*/
     $to = $_POST['email'];
     if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
-        die ('Введите корректный email!');
+        die ('Введите корректный email');
     }
     /*set php.ini - на хостинге НЕ ЗАБЫТЬ ЗАКОММЕНТИРОВАТЬ!!!*/
     ini_set("SMTP", "mail.interzet.ru");
@@ -20,7 +20,7 @@ if (isset($_POST)) {
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Date: " . date('D, d M Y h:i:s O') . "\r\n";
     $message = 'Это тестовое письмо';//на хостинге текст письма изменить на реальный
-    mail($to, $subject, $message, $headers);
+    //mail($to, $subject, $message, $headers);
 
     /*stored form data in a text file*/
     foreach ($_POST as $name => $value) {
@@ -32,5 +32,5 @@ if (isset($_POST)) {
     fclose($file);
 
     /*server response*/
-    echo 'Данные формы сохранены, письмо на email: ' . $to . ' отправлено.';
+    echo 'Информация отправлена на Ваш email';
 }

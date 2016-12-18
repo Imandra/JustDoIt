@@ -14,18 +14,19 @@ $(function () {
             success: [
                 function (data) {
                     if (data) {
-                        $('#response').html(data);
-                        alert(data);
+                        if (data == 'Информация отправлена на Ваш email') {
+                            swal('Спасибо!', data, 'success');
+                        }
+                        else {
+                            swal('Ошибка!', data, 'error');
+                        }
                         document.sub.reset();
                     }
                 }
             ],
             error: [
                 function (xhr) {
-                    $('#response').text('Ошибка, код состояния HTTP: ' +
-                        xhr.status + ' ' + xhr.statusText);
-                    alert('Ошибка, код состояния HTTP: ' +
-                        xhr.status + ' ' + xhr.statusText);
+                    swal('Ошибка!', xhr.status + ' ' + xhr.statusText, 'error');
                 }
             ],
             complete: [
