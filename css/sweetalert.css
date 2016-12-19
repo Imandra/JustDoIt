@@ -544,6 +544,16 @@ body.stop-scrolling {
     border: 0;
 }
 
+.sweet-alert .btn-primary {
+    background-color: #265283;
+    border-color: #265283;
+}
+
+.sweet-alert .btn-primary:hover {
+    background-color: #2a5c91;
+    border-color: #2a5c91;
+}
+
 /*!
  * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
  * Copyright 2015 Daniel Cardoso <@DanielCardoso>

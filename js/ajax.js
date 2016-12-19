@@ -4,7 +4,7 @@ $(function () {
         var form = $(this);
         var formData = form.serialize();
         $.ajax({
-            url: form.attr('action'),
+            url: 'handler.php',
             type: form.attr('method'),
             data: formData,
             dataType: 'text',
