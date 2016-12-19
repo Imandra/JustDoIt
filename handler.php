@@ -20,11 +20,11 @@ if (isset($_POST)) {
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Date: " . date('D, d M Y h:i:s O') . "\r\n";
     $message = 'Это тестовое письмо';//на хостинге текст письма изменить на реальный
-    //mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers);
 
     /*stored form data in a text file*/
-    foreach ($_POST as $name => $value) {
-        $text .= $name . ": " . $value . "\r\n";
+    foreach ($_POST as $key => $value) {
+        $text .= $key . ": " . htmlspecialchars($value) . "\r\n";
     }
     $file = fopen('findings/app.txt', 'a+');
     fwrite($file, 'date: ' . date('d-m-y, H-i-s') . "\r\n");
