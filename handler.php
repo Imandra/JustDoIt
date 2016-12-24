@@ -6,13 +6,9 @@ if (isset($_POST)) {
     if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
         die ('Введите корректный email');
     }
-    /*set php.ini - на хостинге НЕ ЗАБЫТЬ ЗАКОММЕНТИРОВАТЬ!!!*/
-    /*ini_set("SMTP", "mail.interzet.ru");
-    ini_set("smtp_port", "25");
-    ini_set("sendmail_from", "imandra@citydom.ru");*/
 
     /*send mail*/
-    /*$from = 'imandra@citydom.ru';//на хостинге адрес отправителя будет другой
+    /*$from = 'postmaster@justdoitgame.ru';
     $subject = 'Тестовое письмо';//на хостинге сабж письма изменить на реальный
     $subject = '=?utf-8?b?' . base64_encode($subject) . '?=';
     $headers = "Content-type: text/plain; charset=\"utf-8\"\r\n";
