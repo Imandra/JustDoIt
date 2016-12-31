@@ -1704,3 +1704,7 @@ input:-webkit-autofill {
     -webkit-text-fill-color: #555 !important;
     color: #555 !important;
 }
+
+#op:active {
+    outline: none;
+}
