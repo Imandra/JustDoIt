@@ -14,11 +14,12 @@ $(function () {
             success: [
                 function (data) {
                     if (data) {
-                        if (data == 'Информация отправлена на Ваш email') {
+                        if (data == 'Информация отправлена на ваш email') {
                             swal('Спасибо!', data, 'success');
-                        }
-                        else {
+                        } else if (data == 'Введите корректный email') {
                             swal('Ошибка!', data, 'error');
+                        } else {
+                            swal('Ошибка!', 'Не удалось подключиться к почтовому серверу', 'error');
                         }
                     }
                 }
@@ -30,10 +31,6 @@ $(function () {
             ],
             complete: [
                 function () {
-                    /*$('#webform-client-form-1')[0].reset();
-                    $('#edit-submitted-name').attr('required','required');
-                    $('#edit-submitted-phone').attr('required','required');
-                    $('#edit-submitted-mail').attr('required','required');*/
                     $('#op').prop('disabled', false);
                 }
             ]

@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
     $message = "Спасибо, что заинтересовались проектом личностного роста.\n" .
         "Надеемся, что у нас с вами сложатся отношения.\n" .
         "Мы свяжемся с вами в ближайшее время.\n\n--\nС уважением,\nКоманда проекта \"Просто Сделай\"";
-    mail($to, $subject, $message, $headers);
+    if (mail($to, $subject, $message, $headers))
+        echo 'Информация отправлена на ваш email';
 
     /*stored form data in a text file*/
     foreach ($_POST as $key => $value) {
@@ -28,7 +29,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
     fwrite($file, 'date: ' . date('d-m-y, H-i-s') . "\r\n");
     fwrite($file, $text . "" . "\r\n");
     fclose($file);
-
-    /*server response*/
-    echo 'Информация отправлена на Ваш email';
 }

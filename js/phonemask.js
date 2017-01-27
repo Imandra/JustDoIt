@@ -1,3 +1,3 @@
 $(function(){
-    $("#edit-submitted-phone").mask("+7(999) 999 99 99", {placeholder: " " });
+    $("#edit-submitted-phone").mask("+79?999999999", {placeholder: ""});
 });
